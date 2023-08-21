@@ -1,0 +1,33 @@
+@mixin button-style {
+    padding: 14px 25px;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-family: inherit;
+}
+
+@mixin closeBtn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 50%;
+        background-color: rgb(15, 6, 6);
+        transform: translate(50%, -50%) rotate(45deg);
+    }
+
+    &::before {
+        height: 5px;
+        width: 100%;
+    }
+
+    &::after {
+        height: 100%;
+        width: 5px;
+    }
+}
